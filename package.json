@@ -1,0 +1,14 @@
+{
+  "name": "quiz-backend",
+  "version": "1.0.0",
+  "description": "Quiz Backend with Firebase Firestore integration",
+  "main": "Quiz.js",
+  "scripts": {
+    "start": "node Quiz.js"
+  },
+  "dependencies": {
+    "firebase": "^9.22.0"
+  },
+  "author": "dhetto",
+  "license": "MIT"
+}
