@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Manager</title>
+  <link rel="icon" href="https://cdn.glitch.global/5688a322-5518-415d-9ba8-a0a61fb2fb96/Cozzies%20Logo.png?v=174403593285966" type="image/jpeg">
+  <link rel="stylesheet" href="host.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab active" data-tab="tab-quiz">📚 Quiz</button>
+      <button class="tab" data-tab="tab-session">🔁 Session</button>
+      <button class="tab" data-tab="tab-questions">❓ Questions</button>
+    </div>
+
+    <div id="tab-quiz" class="tab-content" style="display: block;">
+      <div id="draftGroup" class="group">
+        <div class="group-header">
+          <div class="arrow-wrapper" onclick="toggleGroup('draftGroup')">
+            <svg class="arrow-icon" width="16" height="16" viewbox="0 0 24 24">
+              <path d="M10 7l5 5-5 5z" fill="currentColor"/>
+            </svg>
+            <span>Draft (4)</span>
+          </div>
+          <div class="group-actions">
+            <button id="draftDeleteBtn" class="action-btn">🗑 DELETE</button>
+            <button id="draftExportBtn" class="action-btn">📤 EXPORT</button>
+          </div>
+        </div>
+        <div class="collapsible-content">
+          <table>
+            <thead>
+            <tr>
+              <th>Title</th><th>No of Sessions</th><th>Created Date</th><th>No of Questions</th><th>Contents</th><th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td><input type="checkbox" class="draft-checkbox"> Oba’s Academy #1</td><td>0</td><td>1-Apr-2025</td><td>25</td><td>Math, Science</td><td class="action-cell"><div class="action-dots">⋯</div></td></tr>
+            <tr><td><input type="checkbox" class="draft-checkbox"> Oba’s Academy #2</td><td>0</td><td>1-Apr-2025</td><td>25</td><td>Math, Science</td><td class="action-cell"><div class="action-dots">⋯</div></td></tr>
+            <tr><td><input type="checkbox" class="draft-checkbox"> Pap’s Islamic Quiz</td><td>0</td><td>1-Apr-2025</td><td>25</td><td>Islam</td><td class="action-cell"><div class="action-dots">⋯</div></td></tr>
+            <tr><td><input type="checkbox" class="draft-checkbox"> Al-Fawaid</td><td>0</td><td>1-Apr-2025</td><td>25</td><td>Islam</td><td class="action-cell"><div class="action-dots">⋯</div></td></tr>
+            </tbody>
+          </table>
+          <button class="add-quiz"><span>+</span> Add Quiz</button>
+        </div>
+      </div>
+
+      <div id="publishedGroup" class="group collapsed">
+        <div class="group-header">
+          <div class="arrow-wrapper" onclick="toggleGroup('publishedGroup')">
+            <svg class="arrow-icon" width="16" height="16" viewbox="0 0 24 24">
+              <path d="M10 7l5 5-5 5z" fill="currentColor"/>
+            </svg>
+            <span>Published (2)</span>
+          </div>
+          <div class="group-actions">
+            <button id="publishedDeleteBtn" class="action-btn">🗑 DELETE</button>
+            <button id="publishedExportBtn" class="action-btn">📤 EXPORT</button>
+          </div>
+        </div>
+        <div class="collapsible-content">
+          <table>
+            <thead>
+            <tr>
+              <th>Title</th><th>No of Sessions</th><th>Created Date</th><th>No of Questions</th><th>Contents</th><th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td><input type="checkbox" class="published-checkbox"> HSI-Aqidah</td><td>0</td><td>1-Apr-2025</td><td>25</td><td>Aqidah</td><td class="action-cell"><div class="action-dots">⋯</div></td></tr>
+            <tr><td><input type="checkbox" class="published-checkbox"> HSI-Fiqih</td><td>0</td><td>1-Apr-2025</td><td>25</td><td>Fiqih</td><td class="action-cell"><div class="action-dots">⋯</div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-session" class="tab-content" style="display: none;">
+      <p>Session tab content here...</p>
+    </div>
+    <div id="tab-questions" class="tab-content" style="display: none;">
+      <p>Questions tab content here...</p>
+    </div>
+
+    <div id="quizDropdown" class="dropdown">
+      <div class="dropdown-item">⬇ Import Questions</div>
+      <div class="dropdown-item">🔍 View Sessions</div>
+      <div class="dropdown-item">👥 View Participants</div>
+      <div class="dropdown-item red">❌ Delete Quiz</div>
+    </div>
+
+    <div id="sessionDropdown" class="dropdown">
+      <div class="dropdown-item">🕑 Start Session</div>
+      <div class="dropdown-item">📋 View Results</div>
+      <div class="dropdown-item">📊 Session Insights</div>
+      <div class="dropdown-item red">❌ Delete Session</div>
+    </div>
+  </div>
+
+  <script src="host.js"></script>
+</body>
+</html>
