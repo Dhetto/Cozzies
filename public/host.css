@@ -1,0 +1,182 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f4;
+  padding: 2rem;
+  color: #333;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tab.active {
+  border-bottom: none;
+  background-color: #fefefe;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  cursor: pointer;
+}
+
+.group-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background-color: #f9c419;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
+
+.add-quiz {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e2b4d;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-quiz span {
+  font-size: 1.2rem;
+  background-color: #1e2b4d;
+  color: white;
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #fcfcf7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f0f0e5;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+td input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+tr.selected {
+  background-color: #fff3d1;
+}
+
+.action-cell {
+  position: relative;
+  text-align: center;
+}
+
+.action-dots {
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-item.red {
+  color: #cc0000;
+}
+
+.collapsible-content {
+  display: block;
+}
+
+.collapsed .collapsible-content {
+  display: none;
+}
+
+.arrow-wrapper svg {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+}
+
+.arrow-wrapper {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+}
+
+.group:not(.collapsed) .arrow-wrapper svg {
+  transition: transform 0.25s ease;
+  transform: rotate(90deg); /* ▶ → ▼ */
+}
